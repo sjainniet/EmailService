@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width">
+<meta name="HandheldFriendly" content="true" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!--[if gte IE 7]><html class="ie8plus" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if IEMobile]><html class="ie8plus" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<meta name="format-detection" content="telephone=no">
+<meta name="generator" content="EDMdesigner, www.edmdesigner.com">
+<title>Order Placed</title>
+
+<!--##custom-font-resource##-->
+
+<style type="text/css" media="screen">
+* {line-height: inherit;}
+.ExternalClass * { line-height: 100%; }
+body, p{margin:0; padding:0; margin-bottom:0; -webkit-text-size-adjust:none; -ms-text-size-adjust:none;} img{line-height:100%; outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;} a img{border: none;} a, a:link, .no-detect-local a, .appleLinks a{color:#5555ff !important; text-decoration: underline;} .ExternalClass {display: block !important; width:100%;} .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: inherit; } table td {border-collapse:collapse;mso-table-lspace: 0pt; mso-table-rspace: 0pt;} sup{position: relative; top: 4px; line-height:7px !important;font-size:11px !important;} .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {text-decoration: default; color: #5555ff !important;
+pointer-events: auto; cursor: default;} .no-detect a{text-decoration: none; color: #5555ff; pointer-events: auto; cursor: default;} {color: #5555ff;} span {color: #EA21C8; border-bottom: none;} span:hover { background-color: transparent; }
+
+.nounderline {text-decoration: none !important;}
+h1, h2, h3 { margin:0; padding:0; }
+p {Margin: 0px !important; }
+
+table[class="email-root-wrapper"] { width: 600px !important; }
+
+body {
+background-color: #ffffff;
+background: #ffffff;
+}
+body { min-width: 280px; width: 100%;}
+td[class="pattern"] .c150p25n { width: 25.000000000000007%;}
+td[class="pattern"] .c300p50r { width: 50%;}
+td[class="pattern"] .c220p73n { width: 73.33333333333333%;}
+td[class="pattern"] .c80p26n { width: 26.666666666666686%;}
+td[class="pattern"] .c219p73n { width: 73.33333333333331%;}
+td[class="pattern"] .c180p30r { width: 30.000000000000075%;}
+td[class="pattern"] .c239p39r { width: 39.99999999999993%;}
+td[class="pattern"] .c75p25n { width: 25.000000000000007%;}
+
+</style>
+<style>
+@media only screen and (max-width: 599px),
+only screen and (max-device-width: 599px),
+only screen and (max-width: 400px),
+only screen and (max-device-width: 400px) {
+ .email-root-wrapper { width: 100% !important; }
+ .full-width { width: 100% !important; height: auto !important; text-align:center;}
+ .fullwidthhalfleft {width:100% !important;}
+ .fullwidthhalfright {width:100% !important;}
+ .fullwidthhalfinner {width:100% !important; margin: 0 auto !important; float: none !important; margin-left: auto !important; margin-right: auto !important; clear:both !important; }
+ .hide { display:none !important; width:0px !important;height:0px !important; overflow:hidden; }
+ .desktop-hide { display:block !important; width:100% !important;height:auto !important; overflow:hidden; max-height: inherit !important; }
+	.c150p25n { width: 25.000000000000007% !important;}
+.c300p50r { width: 100% !important; float:none;}
+.c220p73n { width: 73.33333333333333% !important;}
+.c80p26n { width: 26.666666666666686% !important;}
+.c219p73n { width: 73.33333333333331% !important;}
+.c180p30r { width: 100% !important; float:none;}
+.c239p39r { width: 100% !important; float:none;}
+.c75p25n { width: 25.000000000000007% !important;}
+
+}
+</style>
+<style>
+@media only screen and (min-width: 600px) {
+  td[class="pattern"] .c150p25n { width: 25.000000000000007% !important;}
+td[class="pattern"] .c300p50r { width: 300px !important;}
+td[class="pattern"] .c220p73n { width: 73.33333333333333% !important;}
+td[class="pattern"] .c80p26n { width: 26.666666666666686% !important;}
+td[class="pattern"] .c219p73n { width: 73.33333333333331% !important;}
+td[class="pattern"] .c180p30r { width: 180px !important;}
+td[class="pattern"] .c239p39r { width: 239px !important;}
+td[class="pattern"] .c75p25n { width: 25.000000000000007% !important;}
+
+}
+@media only screen and (max-width: 599px),
+only screen and (max-device-width: 599px),
+only screen and (max-width: 400px),
+only screen and (max-device-width: 400px) {
+  table[class="email-root-wrapper"] { width: 100% !important; }
+  td[class="wrap"] .full-width { width: 100% !important; height: auto !important;}
+
+  td[class="wrap"] .fullwidthhalfleft {width:100% !important;}
+  td[class="wrap"] .fullwidthhalfright {width:100% !important;}
+  td[class="wrap"] .fullwidthhalfinner {width:100% !important; margin: 0 auto !important; float: none !important; margin-left: auto !important; margin-right: auto !important; clear:both !important; }
+  td[class="wrap"] .hide { display:none !important; width:0px;height:0px; overflow:hidden; }
+
+  td[class="pattern"] .c150p25n { width: 25.000000000000007% !important; }
+td[class="pattern"] .c300p50r { width: 100% !important; }
+td[class="pattern"] .c220p73n { width: 73.33333333333333% !important; }
+td[class="pattern"] .c80p26n { width: 26.666666666666686% !important; }
+td[class="pattern"] .c219p73n { width: 73.33333333333331% !important; }
+td[class="pattern"] .c180p30r { width: 100% !important; }
+td[class="pattern"] .c239p39r { width: 100% !important; }
+td[class="pattern"] .c75p25n { width: 25.000000000000007% !important; }
+
+}
+
+
+</style>
+
+<!--[if (gte IE 7) & (vml)]>
+<style type="text/css">
+html, body {margin:0 !important; padding:0px !important;}
+img.full-width { position: relative !important; }
+
+.img200x37 { width: 200px !important; height: 37px !important;}
+.img580x386 { width: 580px !important; height: 386px !important;}
+.img280x187 { width: 280px !important; height: 187px !important;}
+.img280x179 { width: 280px !important; height: 179px !important;}
+.img300x200 { width: 300px !important; height: 200px !important;}
+.img280x186 { width: 280px !important; height: 186px !important;}
+.img280x171 { width: 280px !important; height: 171px !important;}
+.img48x48 { width: 48px !important; height: 48px !important;}
+
+</style>
+<![endif]-->
+
+<!--[if gte mso 9]>
+<style type="text/css">
+.mso-font-fix-arial { font-family: Arial, sans-serif;}
+.mso-font-fix-georgia { font-family: Georgia, sans-serif;}
+.mso-font-fix-tahoma { font-family: Tahoma, sans-serif;}
+.mso-font-fix-times_new_roman { font-family: 'Times New Roman', sans-serif;}
+.mso-font-fix-trebuchet_ms { font-family: 'Trebuchet MS', sans-serif;}
+.mso-font-fix-verdana { font-family: Verdana, sans-serif;}
+</style>
+<![endif]-->
+
+<!--[if gte mso 9]>
+<style type="text/css">
+table, td {
+border-collapse: collapse !important;
+mso-table-lspace: 0px !important;
+mso-table-rspace: 0px !important;
+}
+
+.email-root-wrapper { width 600px !important;}
+.imglink { font-size: 0px; }
+.edm_button { font-size: 0px; }
+</style>
+<![endif]-->
+
+<!--[if gte mso 15]>
+<style type="text/css">
+table {
+font-size:0px;
+mso-margin-top-alt:0px;
+}
+
+.fullwidthhalfleft {
+width: 49% !important;
+float:left !important;
+}
+
+.fullwidthhalfright {
+width: 50% !important;
+float:right !important;
+}
+</style>
+<![endif]-->
+<STYLE type="text/css" media="(pointer) and (min-color-index:0)">
+html, body {background-image: none !important; background-color: transparent !important; margin:0 !important; padding:0 !important;}
+</STYLE>
+
+</head>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="font-family:Arial, sans-serif; font-size:0px;margin:0;padding:0;background: #ffffff !important;" bgcolor="#ffffff">
+<!--[if t]><![endif]--><!--[if t]><![endif]--><!--[if t]><![endif]--><!--[if t]><![endif]--><!--[if t]><![endif]--><!--[if t]><![endif]-->
+  <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"  bgcolor="#ffffff" style="margin:0; padding:0; width:100% !important; background: #ffffff !important;">
+    <tr>
+        <td class="wrap" align="center" valign="top" width="100%">
+          <center>
+<!-- content -->
+<div  style="padding:0px"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td valign="top"  style="padding:0px"><table cellpadding="0" cellspacing="0" width="600" align="center"  style="max-width:600px;min-width:240px;margin:0 auto" class="email-root-wrapper"><tr><td valign="top"  style="padding:0px"><table cellpadding="0" cellspacing="0" border="0" width="100%"  style="border:0px none"><tr><td valign="top"  style="padding:0px"><table cellpadding="0" cellspacing="0" width="100%"><tr><td  style="padding:0px"><table cellpadding="0" cellspacing="0" width="100%"><tr><td align="center"  style="padding:0px"><table cellpadding="0" cellspacing="0" border="0" align="center"><tr><td valign="top" align="center"  style="padding:10px"><table cellpadding="0" cellspacing="0"
+border="0" width="200" height="37"  style="border:0px none;height:auto"><tr><td valign="top"  style="padding:0px"><img
+src="http://www.womansadda.com/resource/images/logohead.png" width="200" height="37" alt="" border="0"  style="display:block" class="img200x37"  /></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td valign="top"  style="padding:10px"><table cellpadding="0" cellspacing="0" width="100%"><tr><td  style="padding:0px"><table cellpadding="0" cellspacing="0" border="0" width="100%"  style="border-top:1px solid #f2f2f2"><tr><td valign="top"><table cellpadding="0" cellspacing="0" width="100%"><tr><td  style="padding:0px"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td valign="top"  style="padding:0px"><table cellpadding="0" cellspacing="0" width="600" align="center"  style="max-width:600px;min-width:240px;margin:0 auto" class="email-root-wrapper"><tr><td valign="top"  style="padding:0px"><table cellpadding="0" cellspacing="0" border="0" width="100%"  style="border:0px none"><tr><td valign="top"  style="padding:0px"><table cellpadding="0" cellspacing="0" width="100%"><tr><td  style="padding:0px"><table cellpadding="0" cellspacing="0" width="100%"><tr><td align="center"  style="padding:0px"><table cellpadding="0" cellspacing="0" border="0" align="center" class="full-width"><tr><td valign="top" align="center"  style="padding:10px"><table cellpadding="0" cellspacing="0" border="0"
+width="580" height="386"  style="border:0px none;height:auto" class="full-width"><tr><td valign="top"  style="padding:0px"><img
+src="C:/Users/A172CTDI/Downloads/OrderCOnfirm-2018-12-14%2016_34_59/images/banner.jpg" width="580" height="386" alt="" border="0"  style="display:block;width:100%;height:auto" class="full-width img580x386"  /></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td valign="top"  style="padding:10px"><div  style="text-align:left;font-family:Helvetica Neue, Helvetica, Arial, Verdana, sans-serif;font-size:15px;color:#000000;line-height:24px;mso-line-height:exactly;mso-text-raise:4px"><h1 style="font-family:Verdana, Geneva, sans-serif; font-size: 36px; color: #000000; line-height: 54px; mso-line-height: exactly; mso-text-raise: 9px; padding: 0; margin: 0;"><span class="mso-font-fix-verdana" th:text="${message}"></span></h1><h3 style="font-family:Verdana, Geneva, sans-serif; font-size: 20px; color: #000000; line-height: 30px; mso-line-height: exactly; mso-text-raise: 5px; padding: 0; margin: 0;"><span class="mso-font-fix-verdana">We have received your order.</span></h3><p
+style="padding: 0; margin: 0;">&nbsp;</p><p style="padding: 0; margin: 0;">Dear Customer,</p><p style="padding: 0; margin: 0;">Thanks for making order from WOMAN's ADDA. <br> This is the confirmation mail for your purchase that you have made with our store. Very soon, we will be processing your order. <br>A shipping confirmation email and sms will be sent to you, once we ship your order.<br>  Thank-you for ordering with us. <br><br> -WOMAN's ADDA</p><p style="padding: 0; margin: 0;">If you have any questions<a href="https://api.whatsapp.com/send?phone=+917905400271&text=Hi, I contacted you Through your website." target="_blank" style="color: #B10DC1 !important; text-decoration: none !important;" class="nounderline"><font style=" color:#B10DC1;"> contact us</font></a>.</p></div></td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<!--[if gte mso 9]></td><td valign="top" style="padding:0;"><![endif]-->
+
+
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td valign="top"  style="padding:0px"><table cellpadding="0" cellspacing="0" width="600" align="center"  style="max-width:600px;min-width:240px;margin:0 auto" class="email-root-wrapper"><tr><td valign="top"  style="padding:0px"><table cellpadding="0" cellspacing="0" border="0" width="100%"  style="border:0px none"><tr><td valign="top"  style="padding:0px"><table cellpadding="0" cellspacing="0" width="100%"><tr><td  style="padding:0px" class="pattern"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td valign="top"  style="padding-top:20px;padding-right:10px;padding-bottom:30px;padding-left:10px"><table cellpadding="0" cellspacing="0" width="100%"><tr><td  style="padding:0px"><table cellpadding="0"
+cellspacing="0" border="0" width="100%"  style="border-top:1px solid #f2f2f2"><tr><td valign="top"><table cellpadding="0" cellspacing="0" width="100%"><tr><td  style="padding:0px"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td valign="top"  style="padding:0;mso-cellspacing:0in">
+<!--[if gte mso 9]></td><td valign="top" style="padding:0;"><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" align="left" width="239" id="c239p39r"  style="float:left" class="c239p39r"><tr><td valign="top"  style="padding:0px">
+</td>
+</tr>
+</table>
+<!--[if gte mso 9]></td><td valign="top" style="padding:0;"><![endif]-->
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td valign="top" width="75"  style="padding:0px" class="c75p25n"><table cellpadding="0" cellspacing="0" width="100%"><tr><td align="center"  style="padding:0px"><table cellpadding="0" cellspacing="0" border="0" align="center" width="48" height="48"  style="border:0px none;height:auto"><tr><td valign="top"  style="padding:0px"><a href="http://www.womansadda.com" target="_blank"><img 
+src="http://www.womansadda.com/resource/images/webO.png" width="48" height="48" alt="" border="0"  style="display:block" class="img48x48"  /></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td valign="top" width="75"  style="padding:0px" class="c75p25n"><table cellpadding="0" cellspacing="0" width="100%"><tr><td align="center"  style="padding:0px"><table cellpadding="0" cellspacing="0" border="0" align="center" width="48" height="48"  style="border:0px none;height:auto"><tr><td valign="top"  style="padding:0px"><a href="http://www.facebook.com/womansaddaindia" target="_blank"><img 
+src="http://www.womansadda.com/resource/images/facebookO.png" width="48" height="48" alt="" border="0"  style="display:block" class="img48x48"  /></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td valign="top" width="75"  style="padding:0px" class="c75p25n"><table cellpadding="0" cellspacing="0" width="100%"><tr><td align="center"  style="padding:0px"><table cellpadding="0" cellspacing="0" border="0" align="center" width="48" height="48"  style="border:0px none;height:auto"><tr><td valign="top"  style="padding:0px"><a href="http://www.instagram.com/womansadda" target="_blank"><img 
+src="http://www.womansadda.com/resource/images/instagramO.png" width="48" height="48" alt="" border="0"  style="display:block" class="img48x48"  /></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td valign="top" width="75"  style="padding:0px" class="c75p25n"><table cellpadding="0" cellspacing="0" width="100%"><tr><td align="center"  style="padding:0px"><table cellpadding="0" cellspacing="0" border="0" align="center" width="48" height="48"  style="border:0px none;height:auto"><tr><td valign="top"  style="padding:0px"><a href="https://api.whatsapp.com/send?phone=+917905400271&text=Hi, I contacted you Through your website." class="social-icon whatsapp"><img 
+src="http://www.womansadda.com/resource/images/whatsappO.png" width="48" height="48" alt="" border="0"  style="display:block" class="img48x48"  /></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td valign="top"  style="padding:0px"><table cellpadding="0" cellspacing="0" width="600" align="center"  style="max-width:600px;min-width:240px;margin:0 auto" class="email-root-wrapper"><tr><td valign="top"  style="padding:0px"><table cellpadding="0" cellspacing="0" border="0" width="100%"  style="border:0px none"><tr><td valign="top"  style="padding:0px"><table cellpadding="0" cellspacing="0" width="100%"><tr><td  style="padding:0px"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td valign="top"  style="padding-top:20px;padding-right:10px;padding-bottom:20px;padding-left:10px"><table cellpadding="0" cellspacing="0" width="100%"><tr><td  style="padding:0px"><table cellpadding="0" cellspacing="0"
+border="0" width="100%"  style="border-top:1px solid #000000"><tr><td valign="top"><table cellpadding="0" cellspacing="0" width="100%"><tr><td  style="padding:0px"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td valign="top"  style="padding:10px"><div  style="text-align:left;font-family:Helvetica Neue, Helvetica, Arial, Verdana, sans-serif;font-size:13px;color:#000000;line-height:24px;mso-line-height:exactly;mso-text-raise:5px"><p style="padding: 0; margin: 0;text-align: center;">You received this e-mail, because you ordered something from us.</p></div></td>
+</tr>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td valign="top"  style="padding-top:10px;padding-right:10px;padding-bottom:30px;padding-left:10px"><div  style="text-align:left;font-family:Helvetica Neue, Helvetica, Arial, Verdana, sans-serif;font-size:15px;color:#000000;line-height:24px;mso-line-height:exactly;mso-text-raise:4px"><p style="padding: 0; margin: 0;text-align: center;"><strong><a href="http://www.womansadda.com" target="_blank" style="color: #B10DC1 !important; text-decoration: none !important;" class="nounderline"><font style=" color:#B10DC1;">WOMAN's ADDA</font></a></strong></p></div></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- content end -->
+          </center>
+        </td>
+    </tr>
+  </table>
+</body>
+</html>

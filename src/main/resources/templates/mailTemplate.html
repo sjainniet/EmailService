@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Product a Newsletter Template | w3layouts</title>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Happy New year Newsletter templates, Email Templates, Newsletters, Marketing  templates, 
+	Advertising templates, free Newsletter" />
+	<!--style-->
+		<style type="text/css">
+			body{
+			width:100%;
+			background:#c0c0c0;
+			margin:0;
+			padding:0;
+			}
+			table{
+            font-size: 14px;
+            border: 0;
+			}
+			@media only screen and (max-width: 800px){
+			.container {width: 754px !important;}
+			}
+			@media only screen and (max-width: 768px){
+			.container {width: 700px !important;}
+			.middle-container {width: 620px;}
+			.trends { width: 189px;}
+			.gallery {width: 176px;}
+			}
+			@media only screen and (max-width: 640px){
+			.container {width: 580px !important;}
+			.middle-container {width: 500px;}
+			.banner {height: 160px;}
+			.log {font-size: .85em;}
+			.social {height: 5px;}
+			.banner-text {font-size: 3em !important;}
+			.season {font-size: 2em !important;}
+			.trends { width: 160px;}
+			.member{width:10px}
+			.gallery {width: 146px;}
+			.member1 {width: 30px;}
+			}
+			@media only screen and (max-width: 480px){
+			.container {width: 400px !important;}
+			.middle-container {width: 355px;}
+			.log {font-size: .65em;}
+			.banner {height: 100px;}
+			.banner1 {height: 80px;}
+			.banner-text {font-size: 2.5em !important;}
+			.season {font-size: 1.8em !important;}
+			.trends {width: 355px; font-size: .965em;}
+			.gallery {width: 350px;}
+			.trend { margin: 2em 0;}
+			.social {height: 1px;}
+			.banner1 {height: 70px;}
+			}
+			@media only screen and (max-width: 320px){
+			.container {width: 295px !important;}
+			.middle-container {width: 276px;}
+			.banner {height: 66px;}
+			.gallery {width: 273px;}
+			.trends {width: 278px;}
+			.banner-text {font-size: 2em !important;}
+			.season {font-size: 1.6em !important;}
+			.season1 {font-size: 1.2em !important;}
+			.banner1 {height: 45px;}
+			.top-head {height: 3px;}
+			.top {height: 30px;}
+			.trend {  margin: 1em 0;}
+			}
+			
+		</style>
+	<!--style-->
+</head>
+<body>
+	<table width="100%">
+		<tbody>
+			<tr>
+				<td height="40" class="top"></td>
+			</tr>
+				<!---header--->
+			<tr>
+				<td>
+					<table width="800" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#fff" class="container">
+						<tbody>
+						<tr>
+							<td>
+								<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="background:url(https://www.camup.tv/sites/default/files/thumb-1920-668087.jpg); background-size:cover;"  class="main-img">	
+									<tbody>
+										<tr>
+											<td>
+												<table width="700" border="0" cellpadding="0" cellspacing="0" align="center" class="middle-container">
+													<tbody>
+														<tr>
+															<td height="20" class="top-head"></td>
+														</tr>
+														<tr>
+															<td>
+															<!--log -->
+																<table align="left" class="log">
+																	<tbody>
+																		<tr>
+																			<td>
+																				<a href="#" style="text-decoration:none;font-size:3em; text-transform:capitalize;color:#fff;font-family:Candara; font-weight:bold;text-transform:capitalize">Product</a>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+																<!--log -->
+																<!-- social-icons -->
+																<table align="right">
+																	<tbody>
+																	<tr>
+																		<td height="10" class="social"></td>
+																	</tr>
+																		<tr>
+																			<td>
+																				<a href="#" ><img src="/images/i1.png" width="29" height="29" alt=""></a>
+																			</td>
+																			<td>
+																				<a href="#" ><img src="/images/i2.png" width="29" height="29" alt=""></a>
+																			</td>
+																			<td>
+																				<a href="#" ><img src="/images/i3.png" width="29" height="29" alt=""></a>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+																<!-- social-icons -->
+															</td>
+														</tr>
+														<!--banner-center-->
+														<tr>
+															<td height="220" class="banner"></td>
+														</tr>
+														<tr>
+															<td style="text-align:center; font-size:3.5em;font-family:Candara; color:#fff; font-weight:bold" class="banner-text">
+																Happy New Year
+															</td>
+														</tr>
+														<tr>
+															<td height="100" class="banner1"></td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<!---header--->
+								<!--banner-bottom-->
+									<tr>
+										<td>
+										<table width="700" border="0" cellpadding="0" cellspacing="0" align="center" class="middle-container">
+										<tbody>
+											<tr>
+												<td height="30"></td>
+											</tr>
+											<tr>
+												<td style="font-size:2.5em; text-decoration:none; color:#636363; font-family:Candara;text-align:center; font-weight:bold" class="season">
+													<span th:text="${message}"></span>
+												</td>
+											</tr>
+											<tr>
+												<td height="20"></td>
+											</tr>
+											<tr>
+												<td style="font-size:1.3em; text-decoration:none; color:#C4C4C4; font-family:Candara;text-align:center; text-transform:none" class="season1">
+												Check out all the  new trends
+												</td>
+											</tr>
+											<tr>
+											<td height="30"></td>
+											</tr>
+											<!--trends-->
+											<tr>
+												<td>
+													<table align="left"  width="215" style="text-align:center" class="trends">
+														<tr>
+															<td>
+																<img src="https://lh3.googleusercontent.com/i9ihFYsnaLujPL9sMcI25sW88eQLjYY12Czq9QJnG4KE1Poj6RLoXIB_ePzTyN50wZsAko9XQg=w640-h400-e365" width="100%" style="border:1px solid#C4C4C4">
+															</td>
+														</tr>
+														<tr>
+															<td style="font-size:1.2em;color:#636363;font-family:Candara;line-height:2em;font-weight:bold">
+																Branded shirts 
+															</td>
+														</tr>
+														<tr>
+															<td style="font-size:.9em;color:#C4C4C4;font-family:Candara;line-height:.5em">
+																Men & Women
+															</td>
+														</tr>
+														<tr>
+															<td height="20"></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="#" style="text-align:center;font-size:1em; text-transform:capitalize; text-decoration:none; padding:.8em 1.5em;  background-color:#ACC700;color:#fff;font-family: Candara;letter-spacing:1px;font-weight: bold" class="button">shop now</a>
+															</td>
+														</tr>
+													</table>
+													<table align="left" class="member">
+															<tbody>
+																<tr>
+																<td width="20"></td>
+																</tr>
+															</tbody>
+														</table>
+													<table align="left" width="215" style="text-align:center" class="trends trend">
+														<tr>
+															<td>
+																<img src="/images/p2.jpg" width="100%" style="border:1px solid#C4C4C4">
+															</td>
+														</tr>
+														<tr>
+															<td style="font-size:1.2em;color:#636363;font-family:Candara;line-height:2em;font-weight:bold">
+																Branded jackets
+															</td>
+														</tr>
+														<tr>
+															<td style="font-size:.9em;color:#C4C4C4;font-family:Candara;line-height:.5em">
+																Men & Women
+															</td>
+														</tr>
+														<tr>
+															<td height="20" ></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="#" style="text-align:center;font-size:1em; text-transform:capitalize; text-decoration:none; padding:.8em 1.5em;  background-color:#ACC700;color:#fff;font-family: Candara;letter-spacing:1px;font-weight: bold" class="button">shop now</a>
+															</td>
+														</tr>
+													</table>
+													<table align="left" class="member">
+															<tbody>
+																<tr>
+																<td width="20"></td>
+																</tr>
+															</tbody>
+														</table>
+													<table align="left" width="215" style="text-align:center" class="trends">
+														<tr>
+															<td>
+																<img src="/images/p3.jpg" width="100%" style="border:1px solid#C4C4C4">
+															</td>
+														</tr>
+														<tr>
+															<td style="font-size:1.2em;color:#636363;font-family: Candara;line-height:2em;font-weight:bold">
+																Branded bags
+															</td>
+														</tr>
+														<tr>
+															<td style="font-size:.9em;color:#C4C4C4;font-family:Candara;line-height:.5em">
+																Men & Women
+															</td>
+														</tr>
+														<tr>
+															<td height="20"></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="#" style="text-align:center;font-size:1em; text-transform:capitalize; text-decoration:none; padding:.8em 1.5em;  background-color:#ACC700;color:#fff;font-family: Candara;letter-spacing:1px;font-weight:bold" class="button">shop now</a>
+															</td>
+														</tr>
+													</table>
+													
+												</td>
+											</tr>
+											<!--trends-->
+										</tbody>
+										</table>
+										</td>
+									</tr>
+								<!--banner-bottom-->
+								<!--gallery-->
+									<tr>
+										<td height="70"></td>
+									</tr>
+									<tr>
+										<td>
+											<table width="700" border="0" cellpadding="0" cellspacing="0" align="center" class="middle-container">
+												<tbody>
+													<tr>
+														<td>
+														<table align="left" width="200" border="0" cellpadding="0" cellspacing="0" class="gallery">
+															<tbody>
+																<tr>
+																<td>
+																	<a href="#"><img src="/images/p5.jpg" width="100%" style="border:1px solid#C4C4C4"></a>
+																</td>
+																</tr>
+																<tr>
+																<td style="font-size:1.2em; text-align:center">
+																	<a href="#" style="color:#636363;font-family:Candara;line-height:2em;font-weight:bold;text-decoration:none">T-Shirt</a>
+																</td>
+																</tr>
+																<tr>
+																<td style="font-size:1.5em; text-align:center; color:#ACC700;font-family:Candara;line-height:2em; font-weight:bold">
+																	$94
+																</td>
+																</tr>
+															</tbody>
+														</table>
+														<table align="left" class="member1">
+															<tbody>
+																<tr>
+																<td width="40"></td>
+																</tr>
+															</tbody>
+														</table>
+														<table align="left" width="200" border="0" cellpadding="0" cellspacing="0" class="gallery trend">
+															<tbody>
+																<tr>
+																<td>
+																	<a href="#"><img src="/images/p6.jpg" width="100%" style="border:1px solid#C4C4C4"></a>
+																</td>
+																</tr>
+																<tr>
+																<td style="font-size:1.2em; text-align:center">
+																	<a href="#" style="color:#636363;font-family:Candara;line-height:2em;font-weight:bold;text-decoration:none">T-Shirt Women</a>
+																</td>
+																</tr>
+																<tr>
+																<td style="font-size:1.5em; text-align:center; color:#ACC700;font-family:Candara;line-height:2em;font-weight:bold">
+																	$100
+																</td>
+																</tr>
+															</tbody>
+														</table>
+														<table align="left" class="member1">
+															<tbody>
+																<tr>
+																<td width="40"></td>
+																</tr>
+															</tbody>
+														</table>
+														<table align="left" width="200" border="0" cellpadding="0" cellspacing="0" class="gallery">
+															<tbody>
+																<tr>
+																<td>
+																	<a href="#"><img src="/images/p7.jpg" width="100%" style="border:1px solid#C4C4C4"></a>
+																</td>
+																</tr>
+																<tr>
+																<td style="font-size:1.2em; text-align:center">
+																	<a href="#" style="color:#636363;font-family:Candara;line-height:2em;font-weight:bold;text-decoration:none">Sweetheart Corset</a>
+																</td>
+																</tr>
+																<tr>
+																<td style="font-size:1.5em; text-align:center; color:#ACC700;font-family:Candara;line-height:2em;font-weight:bold">
+																	$96
+																</td>
+																</tr>
+															</tbody>
+														</table>
+														</td>
+													</tr>
+													
+													
+													
+											
+												</tbody>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td height="70"></td>
+									</tr>
+								<!--gallery-->
+								<!--footer-->
+									<tr>
+										<td>
+											<table width="800"  align="center" bgcolor="#e7e7e7" border="0" cellpadding="0" cellspacing="0" class="container" >
+												<tbody>
+												<tr>
+													<td height="30"></td>
+												</tr>
+													<tr>
+														<td style="color: #696868; font-size: 1em;font-family: Candara; text-align:center; font-weight: normal; line-height: 2em; vertical-align:top;">
+															You are receiving this email because your email is subscribed to our mailing list. 
+														</td>
+													</tr>
+													<tr>
+														<td style="color: #696868; font-size: 1em;font-family: Candara; text-align:center; font-weight: normal; line-height: 2em; vertical-align:top;">
+															<a href="#" style="color:#314c67; text-decoration:none;font-weight: 600;font-family: Candara;">Click here</a> to unsubscribe your email address from this list.  
+														</td>
+													</tr>
+													<tr>
+														<td style="color: #696868; font-size: 1em;font-family: Candara; text-align:center; font-weight: normal; line-height: 2em; vertical-align:top;">
+															© 2015 Product. All rights reserved | Design by <a href="http://w3layouts.com/" style="color:#314c67; text-decoration:none;font-weight: 600;font-family: Candara;">W3layouts</a>
+														</td>
+													</tr>
+													<tr>
+														<td height="20"></td>
+													</tr>
+													<tr>
+														<td>		
+															<table align="center" bgcolor="#e7e7e7">
+																<tbody>
+																	<tr>
+																		<td>
+																			<a href="#" ><img src="/images/i1.png" width="29" height="29" alt=""></a>
+																		</td>
+																		<td>
+																			<a href="#" ><img src="/images/i2.png" width="29" height="29" alt=""></a>
+																		</td>
+																		<td>
+																			<a href="#" ><img src="/images/i3.png" width="29" height="29" alt=""></a>
+																		</td>
+																		<td>
+																			<a href="#" ><img src="/images/i4.png" width="29" height="29" alt=""></a>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</td>
+													</tr>	
+													<tr>
+														<td height="30" bgcolor="#e7e7e7"></td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+								<!--footer-->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td height="40"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
